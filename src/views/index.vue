@@ -3,8 +3,10 @@
     <div class="mt-5">
       <nav class="mb-4">
         <ul class="navBtn">
-          <li v-for="item in menu" :key="item">
-          <router-link to="/" class="navLink" :class="{active: currentMenu === item}" @click.native="changeMenu(item)">{{ item }}</router-link>
+          <li v-for="item in menu" :key="item.title">
+          <router-link to="/" class="navLink" :class="{active: currentMenu === item.title}" @click.native="changeMenu(item.title)">
+          <span class="me-1" :class="item.icon"></span>
+          {{ item.title }}</router-link>
           </li>
         </ul>
       </nav>
@@ -67,8 +69,8 @@
     <div class="card my-5">
       <div class="card-body p-4">
         <div>
-          <button type="button" class="btn btn-primary me-3">設為學員</button>
-          <button type="button" class="btn btn-outline-primary">設為非學員</button>
+          <button type="button" class="btn btn-border me-3">設為學員</button>
+          <button type="button" class="btn btn-border">設為非學員</button>
         </div>
 
         <div class="table-responsive mt-3">
@@ -116,7 +118,12 @@ export default {
   components: { Pagination },
   data() {
     return {
-      menu: ['測驗管理', '測驗者管理', '資訊管理', '意願名單'],
+      menu: [
+        { title: '測驗管理', icon: 'icon-pencil'},
+        { title: '測驗者管理', icon: 'icon-user'},
+        { title: '資訊管理', icon: 'icon-cog'},
+        { title: '意願名單', icon: 'icon-open-book'},
+      ],
       currentMenu: '測驗管理',
       info: {
         name: '',

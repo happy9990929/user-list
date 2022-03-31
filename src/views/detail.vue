@@ -1,7 +1,9 @@
 <template>
   <div class="container">
     <div class="my-3">
-      <router-link :to="{ name: 'index' }">返回測驗者列表</router-link>
+      <router-link :to="{ name: 'index' }" class="d-flex align-items-center">
+        <span class="icon-chevron-small-left fs-3"></span>
+        返回測驗者列表</router-link>
     </div>
     <div class="d-flex align-items-center title">
       <div class="me-3">周小良</div>
@@ -10,42 +12,42 @@
 
     <div class="card mt-4">
       <div class="card-body p-4">
-        <div class="title mb-3">個人資料</div>
+        <div class="title mb-3"><span class="icon-pencil2 me-3"></span>個人資料</div>
         <div>
-          <div class="row my-lg-3">
-            <div class="col-lg-2 infoItem">
+          <div class="row">
+            <div class="my-3 col-lg-2 infoItem">
               <label for="">暱稱：</label>
               <div>小良</div>
             </div>
-            <div class="col-lg-2 infoItem">
+            <div class="my-3 col-lg-2 infoItem">
               <label for="">學歷：</label>
               <div>大專院校</div>
             </div>
-            <div class="col-lg-3 infoItem">
+            <div class="my-3 col-lg-3 infoItem">
               <label for="">出生年月日：</label>
               <div>1994/10/28</div>
             </div>
-            <div class="col-lg-2 infoItem">
+            <div class="my-3 col-lg-2 infoItem">
               <label for="">職業別：</label>
               <div>資訊科技</div>
             </div>
-            <div class="col-lg-2 infoItem">
+            <div class="my-3 col-lg-2 infoItem">
               <label for="">資歷：</label>
               <div>一年以下</div>
             </div>
           </div>
-          <div class="row my-lg-3">
-            <div class="col-lg-4 infoItem">
+          <div class="row">
+            <div class="my-3 col-lg-4 infoItem">
               <label for="">E-mail：</label>
               <div>zhouxiaoliang@gmail.com</div>
             </div>
-            <div class="col-lg-8 infoItem">
+            <div class="my-3 col-lg-8 infoItem">
               <label for="">感興趣的領域：</label>
               <div>DotNet，Java</div>
             </div>
           </div>
 
-          <div class="infoItem my-lg-3">
+          <div class="my-3 infoItem my-lg-3">
             <label for="">備註：</label>
             <div>–</div>
           </div>
@@ -119,7 +121,7 @@
                 <td>{{ item.date }}</td>
                 <td>{{ item.ip }}</td>
                 <td>
-                  <router-link to="/" class="btn btn-detail">作答狀況</router-link>
+                  <router-link to="/" class="btn-detail">作答狀況</router-link>
                 </td>
               </tr>
             </tbody>
@@ -201,6 +203,16 @@ export default {
         },
       ]
     }
+  },
+  methods: {
+    clearForm() {
+      this.info = {
+        topic: 'all',
+        name: '',
+        startDate: '',
+        endDate: ''
+      }
+    },
   }
 }
 </script>

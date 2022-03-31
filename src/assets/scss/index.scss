@@ -14,3 +14,17 @@
     box-shadow: 0 4px 18px -4px #00bcd4;
   }
 }
+
+.btn-border {
+  padding: 0.5rem 1rem;
+  border-radius: 0.358rem;
+  color: #11CDEF;
+  border: 1px solid #11CDEF;
+  font-size: 14px;
+
+  &:hover {
+    background-color: #11CDEF;
+    color: #FFF;
+    box-shadow: 0 4px 18px -4px #00bcd4;
+  }
+}

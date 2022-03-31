@@ -4,9 +4,9 @@ import router from './router'
 
 Vue.config.productionTip = false
 
-// import 'bootstrap/dist/css/bootstrap.css'
 import '@/assets/scss/boostrap/main.scss'
-import '@/assets/scss/helpers/myset.scss'
+import '@/icomoon/style.css'
+
 
 new Vue({
   router,

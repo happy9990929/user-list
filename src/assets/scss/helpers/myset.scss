@@ -1,0 +1,93 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'NotoSans TC', 'Noto Sans CJK TC', '微軟正黑體', sans-serif;
+  background-color: #f8f8f8;
+  color: #5e5873;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.form-label {
+  margin-bottom: 0;
+}
+
+th {
+  font-weight: normal;
+}
+
+.card {
+  box-shadow: 0 4px 24px 0 rgb(34 41 47 / 10%);
+  border: 0;
+  border-radius: 0.428rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1500px;
+}
+
+.title {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.btn {
+  padding: 0.4rem 1.5rem;
+  border-radius: 0.358rem;
+}
+
+.table {
+  color: #82868b;
+}
+
+.table > :not(:first-child) {
+  border-top: 0;
+}
+
+.table > :not(caption) > * > * {
+  padding: 1rem;
+}
+
+.btn-detail {
+  background-color: #defaff;
+  color: #0DA5C0;
+  padding: 0.4rem 1.5rem;
+  border-radius: 1rem;
+  font-size: 14px;
+}
+
+.page-link {
+  display: block;
+  color: #6E6B7B;
+  border: 0 solid #DAE1E7;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  padding: 0.35rem 0.85rem;
+  background-color: #F3F2F7;
+  border-radius: 50%;
+  margin: 0 0.5rem;
+
+  &:hover {
+    color: #FFF;
+    background-color: #11CDEF;
+    border-color: #11CDEF;
+  }
+}
+
+.page-item:first-child .page-link {
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+}
+
+.page-item:last-child .page-link {
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+}

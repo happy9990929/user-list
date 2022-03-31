@@ -1,0 +1,16 @@
+.navBtn {
+  display: flex;
+  font-size: 14px;
+}
+
+.navLink {
+  padding: 0.6rem 1.5rem;
+  border-radius: 0.358rem;
+  color: #5e5873;
+
+  &.active {
+    background-color: #11CDEF;
+    color: #FFF;
+    box-shadow: 0 4px 18px -4px #00bcd4;
+  }
+}
